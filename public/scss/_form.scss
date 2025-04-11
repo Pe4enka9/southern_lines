@@ -1,0 +1,53 @@
+.form {
+    width: 35rem;
+
+    padding: 3rem;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    background-color: $main;
+
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.form .input-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form label {
+    color: $text2;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.form input {
+    padding: .4em .7em;
+
+    color: $text2;
+
+    outline: none;
+    border: .2rem solid #ccc;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    transition: border-color .5s ease;
+}
+
+.form input:focus {
+    border-color: $secondary;
+}

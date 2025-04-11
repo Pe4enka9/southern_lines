@@ -16,4 +16,12 @@ class ApplicationController extends Controller
             'applications' => $applications,
         ]);
     }
+
+    // Одна заявка
+    public function show(Application $application): View
+    {
+        return view('admin.applications.show', [
+            'application' => $application,
+        ]);
+    }
 }

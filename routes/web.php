@@ -14,5 +14,6 @@ Route::middleware(GuestMiddleware::class)->group(function () {
 Route::middleware(AdminMiddleware::class)->group(function () {
     Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
-    Route::get('/', [ApplicationController::class, 'index'])->name('admin.application.index');
+    Route::get('/applications', [ApplicationController::class, 'index'])->name('admin.application.index');
+    Route::get('/applications/{application}', [ApplicationController::class, 'show'])->name('admin.application.show');
 });

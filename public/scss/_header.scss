@@ -1,0 +1,55 @@
+.header-container {
+    background-color: $secondary;
+}
+
+header {
+    width: 80%;
+
+    padding: 3rem 0;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .profile {
+        width: 6.5rem;
+        height: 6.5rem;
+
+        background-color: $main;
+
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        position: relative;
+
+        form {
+            height: 0;
+
+            padding: 1rem;
+
+            background-color: $main;
+
+            -webkit-border-radius: $radius;
+            -moz-border-radius: $radius;
+            border-radius: $radius;
+
+            overflow: hidden;
+            opacity: 0;
+            transition: height 1s ease, opacity 1s ease;
+
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &.open {
+                height: 5rem;
+                opacity: 1;
+            }
+        }
+    }
+}

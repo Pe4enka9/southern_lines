@@ -13,4 +13,14 @@ class AdminLoginRequest extends FormRequest
             'password' => ['required', 'string'],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'login.required' => 'Поле логина обязательно для заполнения',
+            'login.string' => 'Поле логина должно быть строкой',
+            'password.required' => 'Поле пароля обязательно для заполнения',
+            'password.string' => 'Поле пароля должно быть строкой',
+        ];
+    }
 }

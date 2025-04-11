@@ -2,10 +2,10 @@
 @section('title', 'Авторизация')
 
 @section('content')
-    <h1>Авторизация</h1>
-
-    <form action="{{ route('admin.login') }}" method="post">
+    <form action="{{ route('admin.login') }}" method="post" class="form">
         @csrf
+
+        <h1>Авторизация</h1>
 
         <div class="input-container">
             <label for="login">Логин</label>
