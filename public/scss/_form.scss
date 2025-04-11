@@ -14,6 +14,12 @@
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     border-radius: $radius;
+
+    @media (max-width: 400px) {
+        .form {
+            width: 100%;
+        }
+    }
 }
 
 .form .input-container {

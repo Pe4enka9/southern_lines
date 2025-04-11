@@ -40,6 +40,11 @@
   -moz-border-radius: 1rem;
   border-radius: 1rem;
 }
+@media (max-width: 400px) {
+  .form .form {
+    width: 100%;
+  }
+}
 
 .form .input-container {
   width: 100%;
@@ -152,6 +157,11 @@ header .profile form.open {
   box-sizing: border-box;
   font: 10px "Roboto", "sans-serif";
 }
+@media (max-width: 400px) {
+  * {
+    font-size: 7px;
+  }
+}
 
 body {
   background-color: #FDFDFD;
@@ -183,6 +193,11 @@ p {
 .container {
   width: 80%;
   margin: 3rem auto;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
 }
 
 .mb-2 {
