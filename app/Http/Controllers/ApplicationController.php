@@ -10,7 +10,7 @@ class ApplicationController extends Controller
     // Вывод всех заявок
     public function index(): View
     {
-        $applications = Application::all();
+        $applications = Application::orderBy('created_at', 'desc')->get();
 
         return view('admin.applications.index', [
             'applications' => $applications,
