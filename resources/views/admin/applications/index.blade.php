@@ -10,7 +10,7 @@
                 <p>{{ $application->id }} - {{ $application->first_name }} - {{ $application->patronymic ?? 'Нет' }}
                     - {{ $application->phone_number }} - {{ $application->comment ?? 'Нет' }}
                     - {{ $application->from->name }} - {{ $application->to->name }} - {{ $application->service->name }}
-                    - {{ $application->cargoType->name }} - {{ $application->delivery_date }}
+                    - {{ $application->cargoType->name }} - {{ $application->delivery_date->format('d.m.Y') }}
                     - {{ $application->additionalService->name ?? 'Нет' }}</p>
 
                 <a href="{{ route('admin.application.show', $application) }}" class="btn">Подробнее</a>

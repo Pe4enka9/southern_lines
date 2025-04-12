@@ -32,6 +32,10 @@ class Application extends Model
 
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'delivery_date' => 'date',
+    ];
+
     public function from(): BelongsTo
     {
         return $this->belongsTo(City::class, 'from_id');

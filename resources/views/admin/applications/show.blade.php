@@ -13,7 +13,7 @@
         <p>Куда: {{ $application->to->name }}</p>
         <p>Услуга: {{ $application->service->name }}</p>
         <p>Тип груза: {{ $application->cargoType->name }}</p>
-        <p>Дата доставки: {{ $application->delivery_date }}</p>
+        <p>Дата доставки: {{ $application->delivery_date->format('d.m.Y') }}</p>
         <p>Доп. услуги: {{ $application->additionalService->name ?? 'Нет' }}</p>
     </div>
 @endsection
