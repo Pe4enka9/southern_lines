@@ -25,4 +25,44 @@ class ApplicationRequest extends ApiRequest
             'additional_service_id' => ['nullable', 'integer', Rule::exists(AdditionalService::class, 'id')],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'first_name.required' => 'Пожалуйста, укажите ваше имя.',
+            'first_name.string' => 'Имя должно быть текстом.',
+            'first_name.max' => 'Имя не должно превышать 255 символов.',
+
+            'patronymic.string' => 'Отчество должно быть текстом.',
+            'patronymic.max' => 'Отчество не должно превышать 255 символов.',
+
+            'phone_number.required' => 'Пожалуйста, укажите номер телефона.',
+            'phone_number.string' => 'Номер телефона должен быть текстом.',
+            'phone_number.max' => 'Номер телефона слишком длинный. Максимум 255 символов.',
+
+            'comment.string' => 'Комментарий должен быть текстом.',
+
+            'from_id.required' => 'Пожалуйста, выберите город отправления.',
+            'from_id.integer' => 'Город отправления указан некорректно.',
+            'from_id.exists' => 'Выбранный город отправления не найден в списке.',
+
+            'to_id.required' => 'Пожалуйста, выберите город назначения.',
+            'to_id.integer' => 'Город назначения указан некорректно.',
+            'to_id.exists' => 'Выбранный город назначения не найден в списке.',
+
+            'service_id.required' => 'Пожалуйста, выберите услугу.',
+            'service_id.integer' => 'Услуга указана некорректно.',
+            'service_id.exists' => 'Выбранная услуга не найдена в списке.',
+
+            'cargo_type_id.required' => 'Пожалуйста, укажите тип груза.',
+            'cargo_type_id.integer' => 'Тип груза указан некорректно.',
+            'cargo_type_id.exists' => 'Выбранный тип груза не найден в списке.',
+
+            'delivery_date.required' => 'Пожалуйста, укажите дату доставки.',
+            'delivery_date.date' => 'Дата доставки должна быть указана в формате ГГГГ-ММ-ДД.',
+
+            'additional_service_id.integer' => 'Дополнительная услуга указана некорректно.',
+            'additional_service_id.exists' => 'Выбранная дополнительная услуга не найдена в списке.',
+        ];
+    }
 }
